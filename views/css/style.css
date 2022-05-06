@@ -1,0 +1,23 @@
+/* 2022 */
+
+/* root */
+:root {
+    --color-0: #222222;
+    --color-1: #333333;
+    --color-1-hover: #666666;
+    --color-2: #a5a5a5;
+    --color-2-hover: #bbbbbb;
+    --color-3: #f1a33c;
+    --color-3-hover: #f4ba6d;
+}
+
+/* theme */
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    color: var(--color-0);
+    font-size: 16px;
+    margin: 0;
+}
