@@ -1,49 +1,30 @@
 const express = require('express');
-const Conducteur = require('./../models/conducteur');
 const router = express.Router();
+const config = require("../config");
+const Conducteur = require("../models/conducteur");
 
-router.get('/', async (req, res) => {
-  try {
-    res.render('conducteur');
-  }
-  catch (e) {
-    console.log(e);
-    res.redirect('/');
-  }
+router.get('/ajouter', async (req, res) => {
+  res.render('conducteurs/ajouter', {url : config.url_site});
 });
 
-router.get('/:id', async (req, res) => {
-  try {
-    const conducteur = await Conducteur.findById(req.params.id);
-
-    if (conducteur != null) {
-      res.render('conducteur', { conducteur: conducteur });
-    }
-    else {
-      res.redirect('/');
-    }
-  }
-  catch (e) {
-    console.log(e);
-    res.redirect('/');
-  }
+router.get('/', async (req, res) => {
+  res.render('conducteurs/index', {url : config.url_site});
 });
 
 router.post('/', async (req, res) => {
-  try {
-    const conducteur = new Conducteur({
-      nom: req.body.nom,
-      prenom: req.body.prenom,
-      age: req.body.age,
-      permis: req.body.permis
-    });
+  const conducteur = new Conducteur({
+    prenom: req.body.prenom,
+    nom: req.body.nom,
+    email: req.body.email,
+    password: req.body.password
+  });
 
-    await conducteur.save();
-    res.render(`conducteur`);
+  try {
+    conducteur = await conducteur.save();
+    res.redirect('/conducteurs');
   }
   catch (e) {
-    console.log(e);
-    res.render(`conducteur`);
+    res.render('conducteurs/ajouter', {url : config.url_site});
   }
 });
 
