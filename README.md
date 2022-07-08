@@ -1,19 +1,19 @@
-# Davy - Vroomkids back office
+# Davy
 
-## Commande utilisé (Terminal)
+## Commandes utilisés (Terminal)
 - npm init -y
-- npm install express mongoose ejs
-- npm install slugify method-override
-- npm install --save-dev nodemon dotenv
+- npm install express
+- npm install mongoose
+- npm install jsonwebtoken
+- npm install bcryptjs
+- npm install dotenv
+- npm install --save-dev nodemon
 
-## Commande créée (Package.json)
-- "scripts": {"start": "nodemon server.js"}
+## Commandes créées (Package.json)
+- "scripts": {"start": "nodemon src/server.js"}
 
-## Démarrer le site
+## Démarrer le site (Terminal)
 ````shell
 npm install
 npm run start
 ````
-
-## URL
-- http://localhost:8080/

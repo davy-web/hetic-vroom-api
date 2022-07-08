@@ -1,31 +1,23 @@
 {
-  "name": "hetic-vroomkids",
+  "name": "hetic-vroom-api-conducteurs",
   "version": "1.0.0",
-  "description": "- npm init -y\r - npm install express mongoose ejs\r - npm install --save-dev nodemon dotenv",
+  "description": "- npm init -y\r - npm install express\r - npm install mongoose\r - npm install dotenv\r - npm install --save-dev nodemon",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davy-web/hetic-vroomkids.git"
+    "start": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/davy-web/hetic-vroomkids/issues"
-  },
-  "homepage": "https://github.com/davy-web/hetic-vroomkids#readme",
   "dependencies": {
-    "ejs": "^3.1.8",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "marked": "^4.0.16",
-    "mongoose": "^6.3.3",
-    "slugify": "^1.6.5"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.2"
   },
   "devDependencies": {
-    "dotenv": "^16.0.1",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.18"
   }
 }
