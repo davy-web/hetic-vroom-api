@@ -2,9 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const userRoute = require("./routes/user");
-const authenticationRoute = require("./routes/authentication");
 const questionRoute = require("./routes/question");
-const cors = require('cors');
+const authenticationRoute = require("./routes/authentication");
 
 const port = process.env.PORT || 80;
 const app = express();
@@ -15,33 +14,13 @@ mongoose
     .catch((error) => console.error(error));
 
 app.use(express.json());
-app.use(cors());
-// Add headers before the routes are defined
-app.use(function (req, res, next) {
-
-    // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-
-    // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-
-    // Set to true if you need the website to include cookies in the requests sent
-    // to the API (e.g. in case you use sessions)
-    res.setHeader('Access-Control-Allow-Credentials', false);
-
-    // Pass to next layer of middleware
-    next();
-});
 
 app.get("/", (req, res) => {
-    res.send("Vroom API : Conducteurs");
+    res.send("Vroom API");
 });
 
-app.use("/user", userRoute);
+app.use("/users", userRoute);
+app.use("/questions", questionRoute);
 app.use("/authentication", authenticationRoute);
-app.use("/question", questionRoute);
 
 app.listen(port, () => console.log("Server listening to", port));

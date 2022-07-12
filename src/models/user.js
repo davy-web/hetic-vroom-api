@@ -9,28 +9,13 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  prenom: {
+  name: {
     type: String,
     required: true
   },
-  nom: {
+  lastname: {
     type: String,
     required: true
-  },
-  photo_conducteur: {
-    type: String
-  },
-  photo_permis: {
-    type: String
-  },
-  age: {
-    type: Number
-  },
-  telephone: {
-    type: String
-  },
-  casier_judiciaire: {
-    type: String
   },
   token: {
     type: String
