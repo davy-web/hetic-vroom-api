@@ -17,3 +17,10 @@
 npm install
 npm run start
 ````
+
+## API routes
+/questions/get
+/questions/get/:id
+/questions/create
+/questions/update/:id
+/questions/delete/:id
