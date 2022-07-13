@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const userRoute = require("./routes/user");
 const questionRoute = require("./routes/question");
+const driverRoute = require("./routes/driver");
 const authenticationRoute = require("./routes/authentication");
 
 const port = process.env.PORT || 80;
@@ -21,6 +22,7 @@ app.get("/", (req, res) => {
 
 app.use("/users", userRoute);
 app.use("/questions", questionRoute);
+app.use("/drivers", driverRoute);
 app.use("/authentication", authenticationRoute);
 
 app.listen(port, () => console.log("Server listening to", port));

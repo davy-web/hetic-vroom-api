@@ -1,49 +1,49 @@
 const express = require("express");
-const questionSchema = require("../models/question");
+const driverSchema = require("../models/driver");
 
 const router = express.Router();
 
-// create question
+// create driver
 router.post("/create", (req, res) => {
-  const question = questionSchema(req.body);
-  question
+  const driver = driverSchema(req.body);
+  driver
     .save()
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 
-// get all questions
+// get all drivers
 router.get("/get", (req, res) => {
-  questionSchema
+  driverSchema
     .find()
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 
-// get a question
+// get a driver
 router.get("/get/:id", (req, res) => {
   const { id } = req.params;
-  questionSchema
+  driverSchema
     .findById(id)
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 
-// delete a question
+// delete a driver
 router.delete("/delete/:id", (req, res) => {
   const { id } = req.params;
-  questionSchema
+  driverSchema
     .remove({ _id: id })
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 
-// update a question
+// update a driver
 router.put("/update/:id", (req, res) => {
   const { id } = req.params;
-  const { name, lastname, phone, mail, profil, text, date } = req.body;
-  questionSchema
-    .updateOne({ _id: id }, { $set: { name, lastname, phone, mail, profil, text, date } })
+  const { name, lastname, phone, mail, age, photo_driver, photo_permis, casier_judiciaire } = req.body;
+  driverSchema
+    .updateOne({ _id: id }, { $set: { name, lastname, phone, mail, age, photo_driver, photo_permis, casier_judiciaire } })
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const questionSchema = mongoose.Schema({
+const driverSchema = mongoose.Schema({
   name: {
     type: String,
     required: true
@@ -17,18 +17,22 @@ const questionSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  profil: {
+  age: {
+    type: Number,
+    required: true
+  },
+  photo_driver: {
     type: String,
     required: true
   },
-  text: {
+  photo_permis: {
     type: String,
     required: true
   },
-  date: {
-    type: Date,
-    default: new Date().getFullYear() + " " + new Date().getDate()
+  casier_judiciaire: {
+    type: String,
+    required: true
   }
 });
 
-module.exports = mongoose.model('Question', questionSchema);
+module.exports = mongoose.model('Driver', driverSchema);
