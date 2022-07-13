@@ -19,7 +19,9 @@ npm run start
 ````
 
 ## API routes
-question: {
+https://hetic-vroom-api.one-website.com/
+
+- question: {
   name,
   lastname,
   phone,
@@ -28,13 +30,13 @@ question: {
   text,
   date
 }
-/questions/get              (liste des questions)
-/questions/get/:id          (obtenir une question à partir d'un id)
-/questions/create           (ajouter une question)
-/questions/update/:id       (mettre à jour une question à partir d'un id)
-/questions/delete/:id       (supprimer une question à partir d'un id)
+- /questions/get              (liste des questions)
+- /questions/get/:id          (obtenir une question à partir d'un id)
+- /questions/create           (ajouter une question)
+- /questions/update/:id       (mettre à jour une question à partir d'un id)
+- /questions/delete/:id       (supprimer une question à partir d'un id)
 
-driver: {
+- driver: {
   name,
   lastname,
   datephone,
@@ -44,13 +46,13 @@ driver: {
   photo_permis,
   casier_judiciaire
 }
-/drivers/get                (liste des conducteurs)
-/drivers/get/:id            (obtenir un conducteur à partir d'un id)
-/drivers/create             (ajouter un conducteur)
-/drivers/update/:id         (mettre à jour un conducteur à partir d'un id)
-/drivers/delete/:id         (supprimer un conducteur à partir d'un id)
+- /drivers/get                (liste des conducteurs)
+- /drivers/get/:id            (obtenir un conducteur à partir d'un id)
+- /drivers/create             (ajouter un conducteur)
+- /drivers/update/:id         (mettre à jour un conducteur à partir d'un id)
+- /drivers/delete/:id         (supprimer un conducteur à partir d'un id)
 
-car: {
+- car: {
   car_id,
   photo_car,
   kilometrage,
@@ -58,18 +60,18 @@ car: {
   nombre_place_voiture,
   chaise_bebe
 }
-/cars/get                   (liste des voitures)
-/cars/get/:id               (obtenir un voiture à partir d'un id)
-/cars/create                (ajouter un voiture)
-/cars/update/:id            (mettre à jour un voiture à partir d'un id)
-/cars/delete/:id            (supprimer un voiture à partir d'un id)
+- /cars/get                   (liste des voitures)
+- /cars/get/:id               (obtenir un voiture à partir d'un id)
+- /cars/create                (ajouter un voiture)
+- /cars/update/:id            (mettre à jour un voiture à partir d'un id)
+- /cars/delete/:id            (supprimer un voiture à partir d'un id)
 
-user: {
+- user: {
   email,
   password,
   name,
   lastname,
   token
 }
-/authentication/login       (connexion)
-/authentication/register    (inscription)
+- /authentication/login       (connexion)
+- /authentication/register    (inscription)
