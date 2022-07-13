@@ -19,20 +19,57 @@ npm run start
 ````
 
 ## API routes
-/questions/get
-/questions/get/:id
-/questions/create
-/questions/update/:id
-/questions/delete/:id
+question: {
+  name,
+  lastname,
+  phone,
+  mail,
+  profil,
+  text,
+  date
+}
+/questions/get              (liste des questions)
+/questions/get/:id          (obtenir une question à partir d'un id)
+/questions/create           (ajouter une question)
+/questions/update/:id       (mettre à jour une question à partir d'un id)
+/questions/delete/:id       (supprimer une question à partir d'un id)
 
-/drivers/get
-/drivers/get/:id
-/drivers/create
-/drivers/update/:id
-/drivers/delete/:id
+driver: {
+  name,
+  lastname,
+  datephone,
+  mail,
+  age,
+  photo_driver,
+  photo_permis,
+  casier_judiciaire
+}
+/drivers/get                (liste des conducteurs)
+/drivers/get/:id            (obtenir un conducteur à partir d'un id)
+/drivers/create             (ajouter un conducteur)
+/drivers/update/:id         (mettre à jour un conducteur à partir d'un id)
+/drivers/delete/:id         (supprimer un conducteur à partir d'un id)
 
-/cars/get
-/cars/get/:id
-/cars/create
-/cars/update/:id
-/cars/delete/:id
+car: {
+  car_id,
+  photo_car,
+  kilometrage,
+  date_dernier_revision,
+  nombre_place_voiture,
+  chaise_bebe
+}
+/cars/get                   (liste des voitures)
+/cars/get/:id               (obtenir un voiture à partir d'un id)
+/cars/create                (ajouter un voiture)
+/cars/update/:id            (mettre à jour un voiture à partir d'un id)
+/cars/delete/:id            (supprimer un voiture à partir d'un id)
+
+user: {
+  email,
+  password,
+  name,
+  lastname,
+  token
+}
+/authentication/login       (connexion)
+/authentication/register    (inscription)
