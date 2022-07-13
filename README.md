@@ -24,3 +24,15 @@ npm run start
 /questions/create
 /questions/update/:id
 /questions/delete/:id
+
+/drivers/get
+/drivers/get/:id
+/drivers/create
+/drivers/update/:id
+/drivers/delete/:id
+
+/cars/get
+/cars/get/:id
+/cars/create
+/cars/update/:id
+/cars/delete/:id
