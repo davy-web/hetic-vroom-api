@@ -22,6 +22,16 @@ npm install
 npm run start
 ````
 
+## Démarrer le site pour le dévelopement (Terminal)
+````shell
+npm run dev
+````
+
+## Démarrer les tests (Terminal)
+````shell
+npm run test
+````
+
 ## API routes
 ````shell
 https://hetic-vroom-api.one-website.com/
