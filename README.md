@@ -22,7 +22,7 @@ npm install
 npm run start
 ````
 
-## Démarrer le site pour le dévelopement (Terminal)
+## Démarrer le site pour le développement (Terminal)
 ````shell
 npm run dev
 ````
