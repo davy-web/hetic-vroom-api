@@ -8,9 +8,13 @@
 - npm install bcryptjs
 - npm install dotenv
 - npm install --save-dev nodemon
+- npm install --save-dev jest
+- npm install --save-dev supertest
 
 ## Commandes créées (Package.json)
-- "scripts": {"start": "nodemon src/server.js"}
+- "start": "node src/server.js"
+- "dev": "nodemon src/server.js"
+- "test": "jest"
 
 ## Démarrer le site (Terminal)
 ````shell

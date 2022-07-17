@@ -1,10 +1,11 @@
 const express = require("express");
 const userSchema = require("../models/user");
+const auth = require("./jwt");
 
 const router = express.Router();
 
 // create user
-router.post("/create", (req, res) => {
+router.post("/create", auth, (req, res) => {
   const user = userSchema(req.body);
   user
     .save()
@@ -21,7 +22,7 @@ router.get("/get", (req, res) => {
 });
 
 // get a user
-router.get("/get/:id", (req, res) => {
+router.get("/get/:id", auth, (req, res) => {
   const { id } = req.params;
   userSchema
     .findById(id)
@@ -30,7 +31,7 @@ router.get("/get/:id", (req, res) => {
 });
 
 // delete a user
-router.delete("/delete/:id", (req, res) => {
+router.delete("/delete/:id", auth, (req, res) => {
   const { id } = req.params;
   userSchema
     .remove({ _id: id })
@@ -39,7 +40,7 @@ router.delete("/delete/:id", (req, res) => {
 });
 
 // update a user
-router.put("/update/:id", (req, res) => {
+router.put("/update/:id", auth, (req, res) => {
   const { id } = req.params;
   const { email, password, name, lastname } = req.body;
   userSchema

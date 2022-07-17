@@ -4,7 +4,9 @@
   "description": "- npm init -y\r - npm install express\r - npm install mongoose\r - npm install dotenv\r - npm install --save-dev nodemon",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/server.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,8 @@
     "mongoose": "^6.4.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.18"
+    "jest": "^28.1.3",
+    "nodemon": "^2.0.18",
+    "supertest": "^6.2.4"
   }
 }
